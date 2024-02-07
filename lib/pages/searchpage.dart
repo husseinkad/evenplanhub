@@ -11,7 +11,7 @@ class SearchPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Search Page'),
+        title: const Text('صفحه البحث', style: CustomTextStyles.defaultTextStyleBold,),
       ),
       body: const Padding(
         padding: EdgeInsets.all(16.0),
@@ -33,11 +33,11 @@ class SearchBar extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return TextField(
-      style: const TextStyle(color: Colors.blue, fontSize: 16.0),
+      style: CustomTextStyles.smallTextStyle,
        decoration: InputDecoration(
         hintText: 'قم بل بحث...',
         labelStyle: CustomTextStyles.subtitleTextStyleSmall,
-        prefixIcon: const Icon(Icons.search_outlined),
+        prefixIcon: const Icon(Icons.search_outlined, color: Colors.grey,),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10.0),
         ),
