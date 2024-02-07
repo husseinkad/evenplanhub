@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:evenplanhub/pages/home/categories_details.dart';
 import 'package:flutter/material.dart';
 
 class MyGridView extends StatelessWidget {
@@ -33,9 +34,17 @@ class MyGridView extends StatelessWidget {
               ),
               itemCount: squares.length,
               itemBuilder: (context, index) {
-                return Square(
-                  image: squares[index]['image']!,
-                  title: squares[index]['title']!,
+                return GestureDetector(
+                  onTap: (){
+                     Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => CategoryDetailsPage(title: squares[index]['title']!,)),
+            );
+                  },
+                  child: Square(
+                    image: squares[index]['image']!,
+                    title: squares[index]['title']!,
+                  ),
                 );
               },
             ),

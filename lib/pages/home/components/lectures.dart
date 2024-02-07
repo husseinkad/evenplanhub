@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:evenplanhub/pages/viewallpage.dart';
 import 'package:evenplanhub/utiles/textstyles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
@@ -24,7 +25,12 @@ class Lectures extends StatelessWidget {
                 ),
               ),
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                         Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => ViewAllPage(title: title,)),
+            );
+                },
                 child: const Text(
                   'روية الكل',
                   style: CustomTextStyles.subtitleTextStyleSmall,
@@ -40,8 +46,6 @@ class Lectures extends StatelessWidget {
             shrinkWrap: true,
             scrollDirection: Axis.horizontal,
             itemBuilder: (context, index) {
-
-
               return Container(
                 margin: const EdgeInsets.all(8.0),
                 width: 170, // Set the width of each item
@@ -62,7 +66,7 @@ class Lectures extends StatelessWidget {
                         child: CachedNetworkImage(
                             imageUrl: 'https://media.weddingz.in/images/6fb865d3052d1999173caf2fbc40f1f8/best-wedding-reception-halls-in-patna-you-will-absolutely-fall-in-love-with_1200x800.jpg',
                             placeholder: (context, url) => Container(color: Colors.grey[100],)
-
+              
                         ),),
                     ),
                     const Gap(8),

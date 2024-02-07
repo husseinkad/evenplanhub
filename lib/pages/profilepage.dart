@@ -14,7 +14,7 @@ class ProfilePage extends ConsumerWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Gap(20),
+            const Gap(20),
             Center(
               child: ClipOval(
                 child: Container(
@@ -58,8 +58,8 @@ pageContainer(BuildContext context, String icon, String title){
     children: [
       Row(
         children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
+          const Padding(
+            padding: EdgeInsets.all(8.0),
             child: Icon(Icons.person_2_outlined),
           ),
           Padding(
@@ -76,8 +76,8 @@ pageContainer(BuildContext context, String icon, String title){
           ),
         ],
       ),
-      SizedBox(
-          child: const Divider(thickness: 0.3,))
+      const SizedBox(
+          child: Divider(thickness: 0.3,))
     ],
   );
 }
