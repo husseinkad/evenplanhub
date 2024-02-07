@@ -35,7 +35,7 @@ class SearchBar extends ConsumerWidget {
     return TextField(
       style: CustomTextStyles.smallTextStyle,
        decoration: InputDecoration(
-        hintText: 'قم بل بحث...',
+        hintText: 'قم بل بحث...', 
         labelStyle: CustomTextStyles.subtitleTextStyleSmall,
         prefixIcon: const Icon(Icons.search_outlined, color: Colors.grey,),
         border: OutlineInputBorder(
