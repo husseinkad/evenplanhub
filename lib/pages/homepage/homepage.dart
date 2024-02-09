@@ -1,4 +1,4 @@
-import 'package:evenplanhub/pages/home/components/categories.dart';
+import 'package:evenplanhub/pages/homepage/components/categories.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 

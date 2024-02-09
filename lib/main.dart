@@ -1,4 +1,5 @@
-import 'package:evenplanhub/pages/home/homepage.dart';
+import 'package:evenplanhub/pages/home.dart';
+import 'package:evenplanhub/pages/homepage/homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:responsive_framework/responsive_framework.dart';
@@ -6,6 +7,7 @@ import 'package:responsive_framework/responsive_framework.dart';
 void main() {
   runApp(const ProviderScope(child: MyApp()));
 }
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -19,7 +21,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const HomePage(),
+      home: Home(),
 
       builder: (context, child) {
         child = Directionality(

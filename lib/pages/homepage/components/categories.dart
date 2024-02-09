@@ -1,5 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:evenplanhub/pages/home/categories_details.dart';
+import 'package:evenplanhub/pages/homepage/categories_details.dart';
 import 'package:flutter/material.dart';
 
 class MyGridView extends StatelessWidget {
