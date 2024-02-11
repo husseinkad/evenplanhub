@@ -8,7 +8,6 @@ import '../models/signup_models.dart';
 class SignUpNotfier extends StateNotifier<UserModel?> {
   SignUpNotfier() : super(null);
 
-  
 
   Future<UserModel?> signUp(String name, String password, String confirmPassword, String email) async {
     const String apiUrl = 'http://192.168.200.19:3000/api/v1/user/signup';
@@ -72,3 +71,67 @@ final signUpNotifierProvider = StateNotifierProvider<SignUpNotfier, UserModel?>(
   return SignUpNotfier();
 });
 
+
+
+class CarNotifier extends StateNotifier<CarState>{
+  CarNotifier() : super(CarState.idle);
+
+void movCar(){
+  // ur functionality
+  state = CarState.move;
+}
+
+void stopCar(){
+  // ur functionality
+  state = CarState.stop;
+}
+
+void parkCar(){
+  // ur functionality
+  state = CarState.park;
+}
+
+void turnOffCar(){
+  // ur functionality
+  state = CarState.off;
+}
+
+}
+
+final carNotifierProvider = StateNotifierProvider<CarNotifier, CarState>((ref) => CarNotifier());
+
+enum CarState {
+  idle,
+  off,
+  move,
+  stop,
+  park;
+}
+
+class CarBuilder extends ConsumerWidget {
+  const CarBuilder({super.key});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final carState = ref.watch(carNotifierProvider);
+    return Material(
+      child: Column(
+        children: [
+          Center(child: Text("the car is: ${carState.name}")),
+          FilledButton(onPressed: (){
+            ref.read(carNotifierProvider.notifier).movCar();
+          }, child: const Text("move car")),
+          FilledButton(onPressed: (){
+            ref.read(carNotifierProvider.notifier).stopCar();
+          }, child: const Text("stop car")),
+          FilledButton(onPressed: (){
+            ref.read(carNotifierProvider.notifier).parkCar();
+          }, child: const Text("park car")),
+          FilledButton(onPressed: (){
+            ref.read(carNotifierProvider.notifier).turnOffCar();
+          }, child: const Text("turn off car")),
+        ],
+      ),
+    );
+  }
+}

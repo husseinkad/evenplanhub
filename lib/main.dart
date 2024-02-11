@@ -1,3 +1,4 @@
+import 'package:evenplanhub/controllers/signup_controller.dart';
 import 'package:evenplanhub/pages/home.dart';
 import 'package:evenplanhub/pages/homepage/homepage.dart';
 import 'package:flutter/material.dart';
