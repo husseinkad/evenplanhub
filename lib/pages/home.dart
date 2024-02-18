@@ -25,7 +25,6 @@ final selectedTabIndexProvider = StateProvider<int>((ref) => 0);
     return Scaffold(
       body: pages[selectedTabIndex], 
       bottomNavigationBar: BottomNavigationBar(
-
         selectedItemColor: Colors.deepPurple,
         unselectedItemColor: Colors.grey,
         showSelectedLabels: false,

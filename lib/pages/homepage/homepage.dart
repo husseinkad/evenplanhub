@@ -27,6 +27,7 @@ class HomePage extends StatelessWidget {
             const Lectures(title: 'المصورين الاكثر طلبا',),
             const Lectures(title: 'اشهر المنضمين',),
             const Lectures(title: 'اشهر العريفين',),
+            
           ],
         ),
       ),
